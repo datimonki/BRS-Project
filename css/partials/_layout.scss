@@ -1,0 +1,131 @@
+.container {
+
+    max-width: 1440px;
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    padding: 36px 16px;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+
+.container-item-infos {
+    max-width: 576px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.deadmaster {
+    width: 145%;
+    transform: translate3d(-180px,-140px,0);
+}
+
+.btn {
+    display: inline-block;
+
+    padding: 16px 42px;
+    border-radius: 6px;
+
+    transform: skewX(-15deg);
+    text-transform: uppercase;
+    background: #6BFC5F;
+    color: $gray-green-dark;
+    border:hidden;
+    font-weight: 700;
+
+    position: relative;
+    transition: .5s ease;
+
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -9px;
+        left: -8px;
+
+        width: 50%;
+        height: 80%;
+        opacity: 0;
+
+        transition: .5s ease;
+
+        border-top: 10px solid #ffff;
+        border-left: 10px solid #ffffff;
+
+    }
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: -9px;
+        right: -8px;
+
+        width: 50%;
+        height: 80%;
+        opacity: 0;
+
+        transition: .5s ease;
+
+        border-bottom: 10px solid #ffff;
+        border-right: 10px solid #ffffff;
+
+    }
+
+    &:hover {
+        transform: skewX(-15deg) scale(1.05);
+        &::after{
+            opacity: 1;
+        }
+
+        &::before{
+            opacity: 1;
+        }
+
+    }
+
+}
+
+.btn-secondary {
+    display: inline-block;
+
+    padding: 16px 42px;
+    border-radius: 6px;
+
+    transform: skewX(-15deg);
+    text-transform: uppercase;
+    background: none;
+    color: $white;
+    border: 2px solid $green-light;
+    font-weight: 700;
+
+    position: relative;
+    transition: .5s ease;
+
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: -1px;
+        left: -1px;
+
+        z-index: -1;
+
+        width: 0%;
+        height: 101%;
+        border-radius: 6px;
+        transition: .5s ease;
+        background-color: $green-light;
+    
+    }
+
+    &:hover {
+        &:after {
+            width: 101%;
+        }
+    }
+}
