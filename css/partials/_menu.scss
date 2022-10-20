@@ -16,17 +16,14 @@ header {
 
 .nav-menu {
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 
 .nav-list {
     list-style: none;
     display: flex;
-
-    li {
-        margin-left: 32px;
-    }
+    margin-left: 32px;
+    gap: 32px;
 }
 
 .logo {
@@ -71,22 +68,19 @@ header {
 }
 
 .nav-social {
-    z-index: 1;
     display: flex;
+    align-items: center;
+    gap: 16px;
+
     svg{
         cursor: pointer;
-
-        margin-left: 16px;
         width: 24px;
-
-        path, circle {
-            transition: .7s ease;
-        }
+        transition: .7s ease;
 
         &:hover {
+            transform: translate(0, -3px);
             path, circle {
                 fill: $green-light;
-                transform: translate3d(0,-3px,0);
             }
         }
     }
