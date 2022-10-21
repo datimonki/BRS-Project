@@ -4,7 +4,7 @@ header {
 }
 
 .navbar {
-    max-width: 1440px;
+    max-width: 1220px;
     margin: 0 auto;
 
     padding: 0px 16px;
@@ -23,7 +23,11 @@ header {
     list-style: none;
     display: flex;
     margin-left: 32px;
-    gap: 32px;
+    gap: 16px;
+
+    @include responsive(){
+        display: none;
+    }
 }
 
 .logo {
@@ -84,4 +88,21 @@ header {
             }
         }
     }
+
+    @include responsive(){
+        display: none;
+    }
+}
+
+.bx{
+    display: none;
+    @include responsive(){
+        display: block;
+        
+    }
+    width: 48px;
+    height: 48px;
+    background-color: $white;
+
+    border-radius: 8px;
 }
