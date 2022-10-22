@@ -1,0 +1,22 @@
+.logo-brs {
+    fill: transparent;
+
+    animation: logo-brs 12s ease infinite alternate;
+}
+
+@keyframes logo-brs {
+    0% {
+        stroke-width: 3;
+        stroke-dasharray: 1 100;
+        fill: transparent;
+    }
+    25% {
+        stroke-width: 3;
+        fill: transparent;
+        stroke-dasharray: 100 0;
+    }
+    60%, 100% {
+        stroke-width: 4;
+        fill: $green-mid;
+    }
+}
