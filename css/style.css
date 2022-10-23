@@ -227,7 +227,7 @@ p {
   top: 0;
   left: 0;
   display: block;
-  background: linear-gradient(75.26deg, rgba(15, 15, 15, 0.93) 26.21%, rgba(14, 36, 17, 0.5) 52.1%, rgba(18, 18, 18, 0.93) 75.9%);
+  background: linear-gradient(75.26deg, rgba(0, 0, 0, 0.93) 26.21%, rgba(14, 36, 17, 0.5) 52.1%, rgba(0, 0, 0, 0.93) 75.9%);
 }
 
 .bg-loader {
